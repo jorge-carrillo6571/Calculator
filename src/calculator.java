@@ -82,6 +82,7 @@ public class calculator implements ActionListener {
         frame.add(textField); 
         
         frame.setVisible(true);
+        // is just a comment
 
     }
     public static void main (String [] args){
