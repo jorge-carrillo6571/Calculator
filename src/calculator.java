@@ -60,6 +60,7 @@ public class calculator implements ActionListener {
             functioButtons[i].setFocusable(false);
         }
 
+<<<<<<< HEAD
         for (int i =0; i<10; i++){
             numberButtons[i]=new JButton(String.valueOf(i)); 
             numberButtons[i].addActionListener(this);
@@ -72,6 +73,14 @@ public class calculator implements ActionListener {
         panel.setBounds(50,100,300,300 );
         panel.setLayout(new GridLayout(4,4,10,10));
         panel.setBackground(Color.GRAY);
+=======
+        
+
+
+
+
+
+>>>>>>> main
 
 
         
