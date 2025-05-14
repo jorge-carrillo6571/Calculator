@@ -32,6 +32,40 @@ public class calculator implements ActionListener {
         textField.setBounds(50,25,300,50);
         textField.setFont(myFont);
         textField.setEditable(false);
+        // vamo a hacer los botones 
+        addButton= new JButton("+");
+        subButton= new JButton("-");
+        mulButton= new JButton("*");
+        divButton= new JButton("/");
+        decButton= new JButton(".");
+        eqButton= new JButton("=");
+        delButton= new JButton("Delete"); 
+        clrButon= new JButton("Clear");
+        
+        // adding the buttons to the button array 
+        functioButtons[0] = addButton; 
+        functioButtons[1] = subButton;
+        functioButtons[2] = mulButton;
+        functioButtons[3] = divButton;
+        functioButtons[4] = decButton;
+        functioButtons[5] = eqButton;
+        functioButtons[6] = delButton;
+        functioButtons[7] = clrButon;
+
+        //le ponemos una font 
+        for(int i =0; i <8; i++){
+
+            functioButtons[i].addActionListener(this);
+            functioButtons[i].setFont(myFont);
+            functioButtons[i].setFocusable(false);
+        }
+
+        
+
+
+
+
+
 
 
        
