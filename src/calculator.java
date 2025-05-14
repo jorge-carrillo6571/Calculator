@@ -32,14 +32,57 @@ public class calculator implements ActionListener {
         textField.setBounds(50,25,300,50);
         textField.setFont(myFont);
         textField.setEditable(false);
+        // vamo a hacer los botones 
+        addButton= new JButton("+");
+        subButton= new JButton("-");
+        mulButton= new JButton("*");
+        divButton= new JButton("/");
+        decButton= new JButton(".");
+        eqButton= new JButton("=");
+        delButton= new JButton("Delete"); 
+        clrButon= new JButton("Clear");
+        
+        // adding the buttons to the button array 
+        functioButtons[0] = addButton; 
+        functioButtons[1] = subButton;
+        functioButtons[2] = mulButton;
+        functioButtons[3] = divButton;
+        functioButtons[4] = decButton;
+        functioButtons[5] = eqButton;
+        functioButtons[6] = delButton;
+        functioButtons[7] = clrButon;
+
+        //le ponemos una font 
+        for(int i =0; i <8; i++){
+
+            functioButtons[i].addActionListener(this);
+            functioButtons[i].setFont(myFont);
+            functioButtons[i].setFocusable(false);
+        }
+
+        for (int i =0; i<10; i++){
+            numberButtons[i]=new JButton(String.valueOf(i)); 
+            numberButtons[i].addActionListener(this);
+            numberButtons[i].setFont(myFont);
+            numberButtons[i].setFocusable(false);
+        }
+        delButton.setBounds(50,430,145,50);
+        clrButon.setBounds(205,430,145,50); 
+        panel = new JPanel(); 
+        panel.setBounds(50,100,300,300 );
+        panel.setLayout(new GridLayout(4,4,10,10));
+        panel.setBackground(Color.GRAY);
 
 
-       
-       
-       
-       
+        
+
+        frame.add(panel); 
+        frame.add(delButton); 
+        frame.add(clrButon); 
         frame.add(textField); 
+        
         frame.setVisible(true);
+        // is just a comment
 
     }
     public static void main (String [] args){
