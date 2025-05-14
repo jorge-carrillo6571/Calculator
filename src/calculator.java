@@ -60,6 +60,20 @@ public class calculator implements ActionListener {
             functioButtons[i].setFocusable(false);
         }
 
+
+        for (int i =0; i<10; i++){
+            numberButtons[i]=new JButton(String.valueOf(i)); 
+            numberButtons[i].addActionListener(this);
+            numberButtons[i].setFont(myFont);
+            numberButtons[i].setFocusable(false);
+        }
+        delButton.setBounds(50,430,145,50);
+        clrButon.setBounds(205,430,145,50); 
+        panel = new JPanel(); 
+        panel.setBounds(50,100,300,300 );
+        panel.setLayout(new GridLayout(4,4,10,10));
+        panel.setBackground(Color.GRAY);
+
         
 
 
@@ -68,12 +82,16 @@ public class calculator implements ActionListener {
 
 
 
-       
-       
-       
-       
+
+        
+
+        frame.add(panel); 
+        frame.add(delButton); 
+        frame.add(clrButon); 
         frame.add(textField); 
+        
         frame.setVisible(true);
+        // is just a comment
 
     }
     public static void main (String [] args){
